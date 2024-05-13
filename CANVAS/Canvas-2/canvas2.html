@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Galaxy Simulation</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width;
+      const height = canvas.height;
+      const numStars = 1000;
+      const starData = [];
+      const maxDistance = 1000;
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, width, height);
+
+        for (let i = 0; i < numStars; i++) {
+          let star = starData[i];
+          ctx.fillStyle = 'white';
+          ctx.beginPath();
+          ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+          ctx.fill();
+
+
+          ctx.strokeStyle = 'white';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(star.x, star.y);
+          ctx.lineTo(star.x + star.speedX * 10, star.y + star.speedY * 10);
+          ctx.stroke();
+
+          star.x += star.speedX;
+          star.y += star.speedY;
+
+
+          if (star.x > width || star.x < 0 || star.y > height || star.y < 0) {
+ 
+            star.x = Math.random() * width;
+            star.y = Math.random() * height;
+
+            star.speedX = Math.random() * 2 - 1;
+            star.speedY = Math.random() * 2 - 1;
+          }
+        }
+      }
+
+      function animate() {
+        draw();
+        requestAnimationFrame(animate);
+      }
+
+
+      for (let i = 0; i < numStars; i++) {
+        starData.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 2 + 1,
+          speedX: Math.random() * 2 - 1,
+          speedY: Math.random() * 2 - 1
+        });
+      }
+
+      animate();
+    </script>
+  </body>
+</html>

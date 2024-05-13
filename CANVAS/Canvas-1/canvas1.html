@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simulated Fire</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width;
+      const height = canvas.height;
+      const particles = [];
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].x += particles[i].speedX;
+          particles[i].y += particles[i].speedY;
+
+          ctx.fillStyle = 'orange';
+          ctx.beginPath();
+          ctx.arc(particles[i].x, particles[i].y, particles[i].radius, 0, 2 * Math.PI);
+          ctx.fill();
+
+          // Check for collisions with the edge of the canvas
+          if (particles[i].x > width || particles[i].x < 0 || particles[i].y > height || particles[i].y < 0) {
+            particles.splice(i, 1);
+            // Add a new particle
+            particles.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              speedX: Math.random() * 2 - 1,
+              speedY: Math.random() * 2 - 1,
+              radius: Math.random() * 5 + 5
+            });
+          }
+        }
+      }
+
+      function animate() {
+        draw();
+        requestAnimationFrame(animate);
+      }
+
+      // Add a initial particle
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        speedX: Math.random() * 2 - 1,
+        speedY: Math.random() * 2 - 1,
+        radius: Math.random() * 5 + 5
+      });
+
+      animate();
+    </script>
+  </body>
+</html>
