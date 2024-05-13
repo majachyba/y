@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	  <title>Pierwsza strona</title>
+	  <meta name="description" content="Oto moja nie pierwsza strona na zajęciach">
+	  <meta name="keywords" content="szkoła, lekcje, temat, nauka, html">
+	  <meta name="author" content="Maja Kasprzycka">
+	  <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+		
+    </style>
+</head>
+<body>
+    <h1>Click the button to change background color</h1>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+<h1>Losowanie liczby od 1 do 1000</h1>
+<p>Wylosowana liczba: <span id="wynik"></span></p>
+<button onclick="losujLiczbe()">Losuj liczbę</button>
+
+<script>
+function losujLiczbe() {
+  let liczba = Math.floor(Math.random() * 1000) + 1;
+  document.getElementById('wynik').innerHTML = liczba;
+}
+</script>
+<h1>Aktualna godzina w różnych krajach:</h1>
+    
+    <p>Godzina w Polsce: <span id="poland"></span></p>
+    <p>Godzina w Japonii: <span id="japan"></span></p>
+    <p>Godzina w Nigerii: <span id="nigeria"></span></p>
+    <p>Godzina w Kanadzie: <span id="canada"></span></p>
+
+    <script>
+        function updateClocks() {
+            var now = new Date();
+            document.getElementById('poland').innerText = now.toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
+            document.getElementById('japan').innerText = now.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+            document.getElementById('nigeria').innerText = now.toLocaleString('ig-NG', { timeZone: 'Africa/Lagos' });
+            document.getElementById('canada').innerText = now.toLocaleString('en-CA', { timeZone: 'America/Toronto' });
+        }
+        
+        setInterval(updateClocks, 1000);
+        updateClocks();
+    </script>
+</body>
+</html>
