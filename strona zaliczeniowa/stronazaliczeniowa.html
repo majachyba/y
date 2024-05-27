@@ -4,10 +4,178 @@
 	 <title>Strona</title>
 	 <meta name="description" content="Oto moja pierwsza strona na zajęciach">
 	 <meta name="keywords" content="szkoła, lekcje, temat, nauka, html">
-<style> body { background-color: white; }
-#header { background-color: pink; color: black; text-align: center; padding: 5px; font-size: 36px; font-weight: bold; } </style>
+	<style>
+		body {
+			background-color: pink
+		}
+		.menu {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+		}
+		.menu li {
+			margin-right: 20px;
+		}
+		.menu a {
+			color: #000;
+			text-decoration: none;
+		}
+		.menu a:hover {
+			color: #666;
+		}
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+		}
+		.image-link {
+			cursor: pointer;
+		}
+		.image-link:hover {
+			opacity: 0.8;
+		}
+		.galeria {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.galeria img {
+			width: 200px;
+			height: 150px;
+			margin: 10px;
+			border: 1px solid #ccc;
+		}
+		.galeria img:hover {
+			border: 1px solid #666;
+		}
+	</style>
 </head>
 <body>
-<div id="header"> Różne rodzaje motocykli - jaki wybrać? </div>
+	<nav>
+		<ul class="menu">
+			<li><a href="#motocykle">Motocykle</a></li>
+			<li><a href="#historia">Historia</a></li>
+			<li><a href="#galeria">Galeria</a></li>
+			<li><a href="#motogp">MotoGP</a></li>
+		</ul>
+	</nav>
+	<div class="content">
+		<h1>Motocykle</h1>
+		<p>Ta strona powinna spodobac sie kazdemu kto lubi moto</p>
+		
+		<h2 id="motocykle">Rodzaje motocykli</h2>
+		<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fadvacademy.pl%2Fjaki-motocykl-na-poczatek%2F&psig=AOvVaw0wk6ZXhZtcfERyLnPtmlMd&ust=1716931705621000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDZyI_jroYDFQAAAAAdAAAAABAE" target="_blank">
+			<img src="motoschemat.jpg" alt="Schemat motocykli" class="image-link">
+		</a>
+		<p>
+			<b>Standard:</b> Uniwersalne motocykle, idealne dla początkujących. Zalety: uniwersalne i proste w użyciu, idealne dla początkujących, niska cena. Wady: brak specjalnych cech stylowych ani osiągów.
+			<br><br>
+			<b>Cruiser:</b> Motocykle cruiser to maszyny o relaksującym położeniu kierowcy i charakterystycznym designie. Zalety: wygodne położenie kierowcy, charakterystyczny i elegancki design, idealne do jazdy po mieście. Wady: mniejsza zwrotność i prędkość niż inne typy motocykli, mogą być ciężkie do manewrowania.
+			<br><br>
+			<b>Sports:</b> Motocykle sportowe to maszyny o wysokich osiągach i agresywnym designie. Zalety: wysokie osiągi i prędkość, agresywny i atrakcyjny design, idealne do jazdy na torze lub szybkiej jazdy po autostradzie. Wady: mniejsza wygodność i przestrzeń niż inne typy motocykli, wymagają doświadczenia i umiejętności do bezpiecznej jazdy.
+			<br><br>
+			<b>Naked:</b> Motocykle naked to maszyny pozbawione fairingów, które ujawniają ich mechanizmy i silniki. Zalety: prosty i minimalistyczny design, możliwość wyświetlenia mechanizmów i silnika, idealne dla jazdy po mieście lub na krótkich trasach. Wady: mniejsza ochrona przed warunkami pogodnymi niż inne typy motocykli, mogą być głośniejsze niż inne typy motocykli.
+			<br><br>
+		</p>
+		
+		<h2 id="historia">Historia motocykli</h2>
+
+		<h2 id="historia">Historia motocykli</h2>
+
+<p>Motocykle mają długą i interesującą historię, która sięga końca XIX wieku. Pierwszy wehikuł samochodowy z silnikiem benzynowym został stworzony przez Niemców Gottlieba Daimlera i Wilhelma Maybacha w 1885 roku. Był to dwukołowy pojazd, który nazwali <i>Reitwagen</i>. Miał on jednak dużą wadę - było trudno go utrzymać w równowadze, dlatego używał on dwóch koł wózkowych, aby nie przewrócić się podczas jazdy. Pomimo tego, był to pierwszy krok w kierunku stworzenia motocykla.</p>
+
+<p>Pierwszy komercyjny projekt motocykla pochodzi z Anglii i został stworzony przez Edwarda Butlera w 1884 roku. Był to trzykołowy pojazd, który nazwał <i>Butler Petrol Cycle</i>. Miał on zainstalowany czterosuwowy silnik o mocy 0,47 KM i był w stanie rozpędzić się do prędkości 12 km/h. Pomimo to, nie zyskał on popularności i nie wszedł do produkcji seryjnej.</p>
+
+<p>Prawdziwy przełom nastąpił w 1894 roku, kiedy Hildebrand & Wolfmüller stworzyli pierwszy serii produkowany motocykl na świecie. Miał on moc 1,5 KM i kosztował 220 marek niemieckich, co było dużą sumą w tamtych czasach. Motocykl ten był produkowany do 1902 roku i sprzedano około 800 sztuk.</p>
+
+<p>W XX wieku motocykle stały się coraz bardziej popularne i zaczęto je produkować w wielu krajach. W latach 20. i 30. XX wieku pojawiły się pierwsze motocykle sportowe, które były szybsze i bardziej zwrotne niż ich poprzednicy. W latach 50. i 60. XX wieku motocykle stały się coraz bardziej wygodne i bezpieczne, co spowodowało wzrost ich popularności wśród zwykłych ludzi.</p>
+
+<p>Współcześnie motocykle są coraz bardziej zaawansowane technicznie i są wyposażone w wiele funkcji bezpieczeństwa, które pomagają zapobiegać wypadkom. Są też coraz bardziej ekologiczne i ekonomiczne, co czyni je coraz bardziej atrakcyjnymi dla coraz większej liczby ludzi.</p>
+
+<h3>Najważniejsze daty w historii motocykli</h3>
+
+<ul>
+<li>1885: Pierwszy wehikuł samochodowy z silnikiem benzynowym - Daimler i Maybach stworzyli <i>Reitwagen</i>.</li>
+<li>1894: Pierwszy serii produkowany motocykl na świecie - Hildebrand & Wolfmüller.</li>
+<li>1920-1930: Pierwsze motocykle sportowe.</li>
+<li>1950-1960: Motocykle stają się coraz bardziej wygodne i bezpieczne.</li>
+<li>XXI wiek: Motocykle coraz bardziej zaawansowane technicznie, bezpieczne i ekologiczne.</li>
+</ul>
+
+<h3>Najważniejsze postacie w historii motocykli</h3>
+
+<ul>
+<li>Gottlieb Daimler - twórca wehikułu samochodowego.</li>
+<li>Wilhelm Maybach - twórca wehikułu samochodowego.</li>
+<li>Sir Francis Stanley - brytyjski wynalazca i pionier motocykli.</li>
+<li>Erik Grundvig Brøgger - norweski wynalazca i pionier motocykli.</li>
+<li>Soichiro Honda - japoński przemysłowiec i twórca koncernu motoryzacyjnego Honda.</li>
+</ul>
+
+		
+		<h2 id="galeria">Galeria motocykli</h2>
+		<div class="galeria">
+			<img src="moto1.jpg" alt="Motocykl 1">
+			<img src="moto2.jpg" alt="Motocykl 2">
+			<img src="moto3.jpg" alt="Motocykl 3">
+			<img src="moto4.jpg" alt="Motocykl 4">
+			<img src="moto5.jpg" alt="Motocykl 5">
+			<img src="moto6.jpg" alt="Motocykl 6">
+			<img src="moto7.jpg" alt="Motocykl 7">
+			<img src="moto8.jpg" alt="Motocykl 8">
+			<img src="moto9.jpg" alt="Motocykl 9">
+			<img src="moto10.jpg" alt="Motocykl 10">
+			<img src="moto11.jpg" alt="Motocykl 11">
+			<img src="moto12.jpg" alt="Motocykl 12">
+			
+		</div>
+		
+		<h2 id="motogp">MotoGP</h2>
+<h2>MotoGP™ - Co to?</h2>
+
+<p>MotoGP™ to najwyższa klasa wyścigów motocyklowych, organizowana przez Międzynarodową Federację Motocyklową (FIM). Pierwsze wyścigi miały miejsce w 1949 roku, a od tego czasu MotoGP stało się jedną z najbardziej prestiżowych i popularnych serii wyścigowych na świecie.</p>
+
+<h3>Czym jest MotoGP?</h3>
+
+<p>MotoGP to seria wyścigów, w której najlepsi motocykliści świata rywalizują na torach wyścigowych, osiągając prędkości nawet do 360 km/h. Motocykle, które biorą udział w wyścigach, są specjalnie zaprojektowane i wyprodukowane przez najlepsze marki motocyklowe, takie jak Honda, Yamaha, Ducati i Aprilia.</p>
+
+<h3>Najważniejsze daty</h3>
+
+<ul>
+<li>1949: Rok rozpoczęcia MotoGP™.</li>
+<li>1976: Początek ery czterosuwowych silników.</li>
+<li>1992: Początek ery motocykli z jednym cylindrem.</li>
+<li>2002: Początek ery motocykli o pojemności 990 cm³.</li>
+<li>2012: Początek ery motocykli o pojemności 1000 cm³.</li>
+</ul>
+
+<h3>Najważniejsze postacie</h3>
+
+<ul>
+<li>Giacomo Agostini: Włoski motocyklista, który wygrał 15 tytułów mistrzowskich w latach 1966-1975.</li>
+<li>Valentino Rossi: Włoski motocyklista, który wygrał 9 tytułów mistrzowskich w latach 2001-2018.</li>
+<li>Marc Márquez: Hiszpański motocyklista, który wygrał 8 tytułów mistrzowskich w latach 2013-2020.</li>
+<li>Casey Stoner: Australijski motocyklista, który wygrał 2 tytuły mistrzowskie w latach 2007 i 2011.</li>
+<li>Jorge Lorenzo: Hiszpański motocyklista, który wygrał 3 tytuły mistrzowskie w latach 2010, 2012 i 2015.</li>
+</ul>
+
+<h3>Ciekawostki techniczne</h3>
+
+<p>W MotoGP motocykle są wyposażone w zaawansowane technologie, takie jak:</p>
+
+<ul>
+<li>Silniki o pojemności 1000 cm³, produkujące ponad 250 KM mocy.</li>
+<li>Skrzynie biegów z 6-7 biegami, umożliwiającymi osiągnięcie maksymalnej prędkości.</li>
+<li>Opony specjalnie zaprojektowane do wyścigów, zapewniające maksymalną przyczepność i stabilność.</li>
+<li>Systemy elektroniczne, takie jak ABS, traction control i launch control, pomagające motocyklistom kontrolować motocykl.</li>
+</ul>
+
+<p>MotoGP to nie tylko wyścigi, ale także pokaz technicznej doskonałości i umiejętności motocyklistów.</p>
+		
+	</div>
+
 </body>
 </html>
